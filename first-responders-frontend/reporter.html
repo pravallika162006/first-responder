@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Emergency Alert</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* small page-specific tweaks */
+    .page-header { display:flex; justify-content:center; align-items:center; position:relative; margin:18px 0; }
+    .top-actions { position:absolute; right:18px; top:0; display:flex; gap:10px; }
+    .top-actions .btn { padding:8px 14px; border-radius:8px; font-weight:600; font-size:14px; }
+    .card-centered { max-width:640px; margin: 28px auto; background:#fff; border-radius:12px; padding:28px; box-shadow:0 10px 30px rgba(10,20,40,0.06); }
+    .form-row { margin-bottom:14px; }
+    .small-btn { width:auto; padding:10px 14px; border-radius:8px; }
+    .primary-full { width:100%; padding:12px 14px; border-radius:8px; }
+    .note-muted { text-align:center; color:#666; font-size:13px; margin-top:10px; }
+  </style>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 style="margin:0; font-size:26px">Create Emergency Alert</h1>
+
+    <div class="top-actions">
+      <button id="logout-btn" class="btn small-btn" style="background:#0584ff;color:#fff;border:none">Logout</button>
+      <button id="become-responder-btn-top" class="btn small-btn" style="background:#0b84a5;color:#fff;border:none">Become Responder</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card-centered">
+      <form id="create-alert-form">
+        <div class="form-row">
+          <label for="desc">Description</label>
+          <input id="desc" type="text" placeholder="Describe the emergency" />
+        </div>
+
+        <div class="form-row">
+          <label for="lat">Latitude</label>
+          <input id="lat" type="text" placeholder="Latitude" />
+        </div>
+
+        <div class="form-row">
+          <label for="lng">Longitude</label>
+          <input id="lng" type="text" placeholder="Longitude" />
+        </div>
+
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:14px;">
+          <button id="loc-btn" type="button" class="btn small-btn" style="background:#0584ff;color:#fff;border:none">📍 Get My Location</button>
+          <select id="preset-coords" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ccc">
+            <option value="">— Quick places (optional) —</option>
+            <option value="16.508518,80.645325">Guntur (16.508518,80.645325)</option>
+            <option value="17.385044,78.486671">Hyderabad (17.385044,78.486671)</option>
+            <option value="13.082680,80.270718">Chennai (13.08268,80.270718)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <button id="submit-btn" type="submit" class="primary-full" style="background:#0584ff;color:#fff;border:none">Submit Alert</button>
+        </div>
+      </form>
+
+      <div class="note-muted">You can pick a quick place or use your device location. No API key needed.</div>
+    </section>
+  </main>
+
+  <script src="reporter.js"></script>
+</body>
+</html>

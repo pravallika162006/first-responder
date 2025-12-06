@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Role</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: #f3f6fb;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .reporter-btn {
+      background: #007bff;
+    }
+
+    .responder-btn {
+      background: #28a745;
+    }
+
+    .skip-btn {
+      background: #555;
+      margin-top: 25px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Welcome — choose your role</h2>
+    <p>Select whether you want to register as a Reporter or Responder.</p>
+
+    <button id="reporterBtn" class="btn reporter-btn">Reporter</button>
+    <button id="responderBtn" class="btn responder-btn">Responder</button>
+    <button id="skipBtn" class="btn skip-btn">Skip for now</button>
+  </div>
+
+  <script src="./role-select.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>First Responders - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen" class="screen">
+      <h2>First Responders Login</h2>
+
+      <div id="login-error" class="error"></div>
+
+      <form id="login-form">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" required />
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <p style="margin-top:15px; text-align:center;">
+  <a href="signup.html">Don't have an account? Signup</a>
+</p>
+
+
+      <!-- Just an info note -->
+      <p class="note">
+        Reporter and Responder both login here.<br>
+        They will go to different pages based on their role.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

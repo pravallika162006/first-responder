@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responder Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* local safety styles */
+    :root{--accent:#0584ff;--muted:#666;--card-bg:#fff}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f4f6fb;margin:0;padding:28px}
+    .wrap{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    h1{margin:0;font-size:28px;text-align:center;flex:1}
+    .header-right{display:flex;gap:10px;align-items:center}
+    .small-btn{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:10px;cursor:pointer;font-size:14px}
+    .small-ghost{background:#fff;border:1px solid #e3eefc;color:#0b76e6;padding:8px 12px;border-radius:10px;cursor:pointer}
+    #alerts-container{margin-top:10px}
+    .card{background:var(--card-bg);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(10,20,40,0.06);margin-bottom:14px}
+    .alert-card{border:1px solid #eee;padding:15px;border-radius:8px;margin-bottom:12px;background:#fff}
+    .alert-actions{display:flex;gap:10px;justify-content:flex-end}
+    .accept-btn,.complete-btn{padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+    .accept-btn{background:#0584ff;color:#fff}
+    .complete-btn{background:#0b84a5;color:#fff}
+    .empty{color:var(--muted);text-align:left;padding:20px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Alerts Dashboard</h1>
+      <div class="header-right">
+        <button id="role-switch-btn" class="small-ghost" title="Switch to Reporter">Switch to Reporter</button>
+        <button id="logout-btn" class="small-btn">Logout</button>
+      </div>
+    </header>
+
+    <section id="alerts-container">
+      <div class="card empty">Loading alerts…</div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
